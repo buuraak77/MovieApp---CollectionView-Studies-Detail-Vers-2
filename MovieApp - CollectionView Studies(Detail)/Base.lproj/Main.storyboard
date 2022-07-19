@@ -103,53 +103,53 @@
                     <navigationItem key="navigationItem" id="4y5-nk-ZA6"/>
                     <connections>
                         <outlet property="collectionView" destination="rVa-WG-qA9" id="bLQ-GZ-fdf"/>
-                        <segue destination="jC6-YD-PT6" kind="show" identifier="toBasket" id="ysh-B9-8cU"/>
+                        <segue destination="De0-3W-gO8" kind="show" identifier="toDetail" id="Cai-jo-LQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="983.20000000000005" y="65.217391304347828"/>
         </scene>
-        <!--Basket MovieVC View Controller-->
-        <scene sceneID="dbw-KF-3nB">
+        <!--DetailVC-->
+        <scene sceneID="KUP-X0-ddq">
             <objects>
-                <viewController id="jC6-YD-PT6" customClass="BasketMovieVCViewController" customModule="MovieApp___CollectionView_Studies_Detail_" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1Kt-w0-T2V">
+                <viewController storyboardIdentifier="toDetailVc" id="De0-3W-gO8" customClass="DetailVC" customModule="MovieApp___CollectionView_Studies_Detail_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vw3-Lg-RxB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Kaf-5g-iJz">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell2" id="9Jm-pa-6Mv">
-                                        <rect key="frame" x="0.0" y="44.5" width="375" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Jm-pa-6Mv" id="j8M-eZ-jYf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arog" translatesAutoresizingMaskIntoConstraints="NO" id="hDp-JT-FMZ">
+                                <rect key="frame" x="67" y="44" width="240" height="333"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwY-L0-SeX">
+                                <rect key="frame" x="67" y="432" width="240" height="62"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="xpE-mD-9rF"/>
+                        <viewLayoutGuide key="safeArea" id="a6H-0D-pdP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xpE-mD-9rF" firstAttribute="bottom" secondItem="Kaf-5g-iJz" secondAttribute="bottom" id="ChO-yc-xvb"/>
-                            <constraint firstItem="xpE-mD-9rF" firstAttribute="trailing" secondItem="Kaf-5g-iJz" secondAttribute="trailing" id="HAe-Yd-LFI"/>
-                            <constraint firstItem="Kaf-5g-iJz" firstAttribute="leading" secondItem="xpE-mD-9rF" secondAttribute="leading" id="jhG-oR-cj8"/>
-                            <constraint firstItem="Kaf-5g-iJz" firstAttribute="top" secondItem="xpE-mD-9rF" secondAttribute="top" id="lfp-6Z-ecR"/>
+                            <constraint firstItem="hDp-JT-FMZ" firstAttribute="trailing" secondItem="iwY-L0-SeX" secondAttribute="trailing" id="7h1-aL-PqS"/>
+                            <constraint firstItem="hDp-JT-FMZ" firstAttribute="leading" secondItem="a6H-0D-pdP" secondAttribute="leading" constant="67" id="Acj-DI-kCx"/>
+                            <constraint firstItem="iwY-L0-SeX" firstAttribute="centerY" secondItem="vw3-Lg-RxB" secondAttribute="centerY" constant="129.5" id="GpA-Yk-o57"/>
+                            <constraint firstItem="hDp-JT-FMZ" firstAttribute="leading" secondItem="iwY-L0-SeX" secondAttribute="leading" id="I6D-Z2-wJJ"/>
+                            <constraint firstItem="hDp-JT-FMZ" firstAttribute="top" secondItem="a6H-0D-pdP" secondAttribute="top" id="YFj-rb-mAi"/>
+                            <constraint firstItem="hDp-JT-FMZ" firstAttribute="centerX" secondItem="vw3-Lg-RxB" secondAttribute="centerX" id="el1-Pu-OWs"/>
+                            <constraint firstItem="iwY-L0-SeX" firstAttribute="top" secondItem="a6H-0D-pdP" secondAttribute="top" constant="388" id="gjs-kt-aUo"/>
+                            <constraint firstItem="a6H-0D-pdP" firstAttribute="bottom" secondItem="hDp-JT-FMZ" secondAttribute="bottom" constant="290" id="xaW-kb-Umh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3iP-wv-RdU"/>
+                    <navigationItem key="navigationItem" id="pbb-o2-toH"/>
                     <connections>
-                        <outlet property="tableView" destination="Kaf-5g-iJz" id="VWr-fq-32U"/>
+                        <outlet property="imageView" destination="hDp-JT-FMZ" id="Sjt-4t-KN6"/>
+                        <outlet property="nameLabel" destination="iwY-L0-SeX" id="lea-NS-ewr"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3j1-L7-FYk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGf-89-cuS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1839" y="72"/>
+            <point key="canvasLocation" x="1888.8" y="64.31784107946028"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AHD-IV-pLd">
@@ -171,6 +171,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arog" width="714" height="1024"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

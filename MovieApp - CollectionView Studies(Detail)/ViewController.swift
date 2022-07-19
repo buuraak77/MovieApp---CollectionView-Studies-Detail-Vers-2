@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     var movieList = [Movies]()
@@ -15,6 +16,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         
         
@@ -35,8 +38,18 @@ class ViewController: UIViewController {
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "toDetailVc") as! DetailVC
+        vc.name = "\(movieList[indexPath.row].movieName!)"
+        vc.image = UIImage(named: movieList[indexPath.row].movieImage)
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
 
     
+
 
     
 
@@ -44,7 +57,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, addBasket {
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     
     func addToBasket(indexPath: IndexPath) {
@@ -78,9 +91,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         cell.movieNameLabel.text = movie.movieName!
         cell.moviePriceLabel.text = "\(movie.moviePrice!) ₺"
         cell.movieImageLabel.image = UIImage(named: movie.movieImage!)
-        
-        cell.basketProtocol = self
-        cell.indexPath =  indexPath
         
         
         return cell

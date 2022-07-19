@@ -7,9 +7,7 @@
 
 import UIKit
 
-protocol addBasket {
-    func addToBasket(indexPath:IndexPath)
-}
+
 
 class MovieCell: UICollectionViewCell {
     @IBOutlet var movieNameLabel: UILabel!
@@ -17,14 +15,11 @@ class MovieCell: UICollectionViewCell {
     @IBOutlet var moviePriceLabel: UILabel!
     
     
-    var basketProtocol: addBasket?
-    var indexPath: IndexPath?
     
     
     
     @IBAction func addBasketButton(_ sender: UIButton) {
         
-        basketProtocol?.addToBasket(indexPath: indexPath!)
     }
-}
 
+}
